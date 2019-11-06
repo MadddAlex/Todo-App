@@ -1,0 +1,12 @@
+<div class="card text-white mb-5" style="background-color: #7c0a02">
+    <div class="card-header">
+        <h2 (click)="showDescription()">{{archivedTask.task}}</h2>
+    </div>
+    <div class="card-body" *ngIf="clicked">
+        <p class="card-text">
+            {{archivedTask.description}}
+        </p>
+        <hr>
+        <button (click)="onDelete()" class="btn btn-danger card-link">Delete</button>
+    </div>
+</div>

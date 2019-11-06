@@ -1,0 +1,19 @@
+<div class="card text-white mb-5" style="background-color: #de6b35">
+    <div class="card-header">
+        <h2 (click)="showDescription(task)">{{task.task}}</h2>
+    </div>
+    <div class="card-body" *ngIf="clicked">
+        <p class="card-text" *ngIf="!editing">
+            {{task.description}}
+        </p>
+        <div *ngIf="editing">
+            <input type="text" [(ngModel)]="editValue"> 
+            <br><br>
+            <button (click)="updateDescription()" class="btn btn-secondary card-link">Save</button>
+            <button (click)="Cancel()" class="btn btn-warning card-link">Cancel</button>
+        </div>
+        <hr>
+        <button (click)="onEditTask()" class="btn btn-secondary card-link" [disabled]="editing">Edit</button>
+        <button (click)="onArchiveTask()" class="btn btn-warning card-link" [disabled]="editing">Archive</button>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container mb-3">
+    <div class="card border-info mb-3">
+        <div class="card-body">
+            <div class="form-inline">
+                <h1>Active Tasks</h1>
+                <app-searchbar (returnedSearch)="displaySearchedTasks($event)"></app-searchbar>
+                <div class="ml-auto"><app-add-task (addedTask)="onAddTask($event)"></app-add-task></div> <!-- ml-auto == margine-left: auto -->
+            </div>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-body mb-3">
+            <div class="card-deck" *ngIf="!showMessage">
+                <app-task *ngFor="let task of tasks" [task]="task" (archivedTask)="onArchiveTask($event)"></app-task>  
+            </div>
+            <div *ngIf="showMessage">
+                <p>No Results Found</p>
+            </div>
+        </div>
+    </div>
+</div>

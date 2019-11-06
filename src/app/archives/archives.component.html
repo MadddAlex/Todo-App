@@ -1,0 +1,14 @@
+<div class="container mb-3">
+    <div class="card text-center border-info mb-3">
+        <div class="card-header">
+            <h1>Archived Tasks</h1>
+        </div>
+    </div>
+    <div class="card border-info mb-3 mh-100">
+      <div class="card-body">
+          <div class="card-deck">
+              <app-archive-task *ngFor="let archive of archives" [archivedTask]="archive" (deletedArchive)="onDeletedArchive($event)"></app-archive-task>  
+          </div>
+      </div>
+    </div>
+</div>
