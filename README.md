@@ -1,6 +1,6 @@
 # TodoApp
 
-Todo App where you can add active tasks, edit its description and mark it as archived. Archived tasks can be viewed as well and eventually deleted.
+Todo App where you can add active tasks, edit its description and mark it as archived. Archived tasks can be viewed as well and eventually deleted. API endpoints and CRUD functions are done in Laravel
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
